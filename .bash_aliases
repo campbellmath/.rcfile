@@ -26,7 +26,7 @@ alias matlabcli="matlab -nodesktop -nosplash -nojvm"
 alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q"
 alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose"
 alias cscope_c="find ./ -name "*.c" -or -name "*.h" -or -name "*.cpp" -or -name "*.S" | cscope -Rbk"
-alias Win7="VBoxHeadless -s Win7 -v off &"
+alias Win7="VBoxHeadless -s win7 -v off &"
 
 OS=`uname -s`
 case $OS in
