@@ -82,6 +82,7 @@ case $OS in
         linux_logo
     ;;
     "Darwin")
+        export PATH=$HOME/opt/bin:$HOME/opt/program/Android/ndk:$PATH
         echo "Mac OS X"
         export LC_ALL=en_US.UTF-8
         export LC_COLLATE=C
