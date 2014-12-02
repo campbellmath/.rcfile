@@ -23,9 +23,9 @@ alias less="less -r"
 alias grep="grep --color"
 alias tmux="tmux -2"
 alias matlabcli="matlab -nodesktop -nosplash -nojvm"
-alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q"
-alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose"
-alias cscope_c="find ./ -name "*.c" -or -name "*.h" -or -name "*.cpp" -or -name "*.S" | cscope -Rbk"
+alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git"
+alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose --exclude=.git"
+alias cscope_c="find ./ -name \"*.c\" -or -name \"*.h\" -or -name \"*.cpp\" -or -name \"*.S\" | cscope -Rbqk"
 alias Win7="VBoxHeadless -s win7 -v off &"
 function gi() { curl -s http://www.gitignore.io/api/$@ ;}
 
