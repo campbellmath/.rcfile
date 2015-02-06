@@ -27,6 +27,7 @@ alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git
 alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose --exclude=.git"
 alias cscope_c="find ./ -name \"*.c\" -or -name \"*.h\" -or -name \"*.cpp\" -or -name \"*.S\" | cscope -Rbqk"
 alias Win7="VBoxHeadless -s win7 -v off &"
+alias vnc="vncserver -geometry 1366x768 -geometry 1024x640 -geometry 1600x1200 -geometry 1024x768 -geometry 1920x1080 -depth 24"
 function gi() { curl -s http://www.gitignore.io/api/$@ ;}
 
 OS=`uname -s`
