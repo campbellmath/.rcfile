@@ -28,6 +28,7 @@ alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbos
 alias cscope_c="find ./ -name \"*.c\" -or -name \"*.h\" -or -name \"*.cpp\" -or -name \"*.S\" | cscope -Rbqk"
 alias Win7="VBoxHeadless -s win7 -v off &"
 alias vnc="vncserver -geometry 1366x768 -geometry 1024x640 -geometry 1600x1200 -geometry 1024x768 -geometry 1920x1080 -depth 24"
+alias sshGT="ssh 220.132.145.199 -p 22222 -X"
 function gi() { args=$@; curl -L -s https://www.gitignore.io/api/${args}; }
 
 OS=`uname -s`

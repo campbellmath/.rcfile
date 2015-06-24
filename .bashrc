@@ -145,7 +145,7 @@ darkcyan="\[\e[36m\]"
 darkwhite="\[\e[37m\]"
 user=$magenta"\u"$end
 at=$green"@"$end
-localhost=$yellow"\H"$end
+localhost=$yellow"\h"$end
 left=$white"["$end
 right=$white"]"$end
 command_number=$left$cyan"\#"$end$right
@@ -153,7 +153,7 @@ time_=$left$red"\t"$end$right
 dir=$white"[\w]"$end
 orz=$cyan"Orz"$end
 gitbranch="\$(git branch > /dev/null 2>&1 && git branch | grep \"*\" | awk '{ printf \"[⚡ $green%s$end]\", \$2 }')"
-prompt="$green\$ "$end
+prompt="$green% "$end
 PS1="$user$at$localhost$time_$command_number$gitbranch$dir$orz\n$prompt"
 ###############################################################################
 # For colourful man pages (CLUG-Wiki style)
