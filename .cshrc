@@ -3,8 +3,8 @@
 # System-wide .cshrc file for csh(1).
 # locale
 #setenv  LANG       zh_TW.Big5
-setenv  LC_CTYPE   en_US.ISO8859-1
-setenv  LC_TIME    C
+#setenv  LC_CTYPE   en_US.ISO8859-1
+#setenv  LC_TIME    C
 
 # hotkey
 alias vi vim
@@ -41,6 +41,14 @@ set darkmagenta="%{\033[0;35m%}"
 set    darkcyan="%{\033[0;36m%}"
 set   darkwhite="%{\033[0;37m%}"
 set         end="%{\033[0m%}"
+
+setenv LESS_TERMCAP_mb `bash -c 'echo -en "\033[01;31m"'`
+setenv LESS_TERMCAP_md `bash -c 'echo -en "\033[01;31m"'`
+setenv LESS_TERMCAP_me `bash -c 'echo -en "\033[0m"'`
+setenv LESS_TERMCAP_se `bash -c 'echo -en "\033[0m"'`
+setenv LESS_TERMCAP_so `bash -c 'echo -en "\033[01;44;33m"'`
+setenv LESS_TERMCAP_ue `bash -c 'echo -en "\033[0m"'`
+setenv LESS_TERMCAP_us `bash -c 'echo -en "\033[01;32m"'`
 
 set prompt = "${magenta}%n${green}@${yellow}%m${white}[${red}%P${white}][${cyan}%h${white}][%~]${cyan}Orz \n${green}\%${end} "
 set path = ($HOME/opt/bin /sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin /usr/X11R6/bin $HOME/bin $HOME/.bin $path)
