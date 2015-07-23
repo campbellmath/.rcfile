@@ -14,13 +14,14 @@ alias lla ls -la
 alias rm rm -i
 alias cls clear
 alias more less
-alias grep grep --color
+alias grep grep --color=always -n
 alias tree tree -F -C -N
 alias bdate date +%Y_%m%d_%H%M
 alias dirdiff diff --brief -r
 alias tmux tmux -2
 alias ctags_cpp "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git"
 alias cscope_c 'find ./ -name "*.c" -or -name "*.h" -or -name "*.cpp" -or -name "*.S"  -or -name "*.s"| cscope -Rbqk'
+alias delete_broken_symlinks 'find . -xtype l -delete'
 
 set       black="%{\033[1;30m%}"
 set         red="%{\033[1;31m%}"

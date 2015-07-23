@@ -25,3 +25,17 @@
   '(tool-bar-mode nil)
   '(tooltip-mode nil))
 (load-theme 'manoj-dark t)
+
+;; set default tab char's display width to 4 spaces
+(setq-default tab-width 4)
+
+;; make indentation commands use space only (never tab character)
+(setq-default indent-tabs-mode nil)
+
+;; make tab key do indent first then completion.
+(setq-default tab-always-indent 'complete)
+
+;; set current buffer's tab char's display width to 4 spaces
+(setq tab-width 4)
+
+(setq c-basic-indent 4)
