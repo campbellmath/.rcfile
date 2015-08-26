@@ -28,6 +28,8 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+export TERM=rxvt
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -79,7 +81,6 @@ case $OS in
         LC_COLLATE=C
         export LC_TIME=C
         export LANG LC_CTYPE LC_COLLATE
-        linux_logo
     ;;
     "Darwin")
         export PATH=$HOME/opt/bin:$HOME/opt/program/Android/ndk:$PATH
