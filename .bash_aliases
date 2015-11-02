@@ -37,7 +37,7 @@ case $OS in
         alias dual_screen="xrandr --auto --output HDMI1 --mode 1920x1080 --left-of VGA1"
         ;;
     "Darwin")
-        alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
+        # alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
         ;;
 esac
 # vim:set ft=sh:

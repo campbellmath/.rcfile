@@ -28,6 +28,8 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+export TERM=rxvt
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -79,10 +81,10 @@ case $OS in
         LC_COLLATE=C
         export LC_TIME=C
         export LANG LC_CTYPE LC_COLLATE
-        linux_logo
     ;;
     "Darwin")
-        export PATH=$HOME/opt/bin:$HOME/opt/program/Android/ndk:$PATH
+        export PATH="$HOME/opt/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
         echo "Mac OS X"
         export LC_ALL=en_US.UTF-8
         export LC_COLLATE=C
@@ -165,4 +167,4 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 ###############################################################################
-export LIBGL_ALWAYS_INDIRECT=1
+# export LIBGL_ALWAYS_INDIRECT=1
