@@ -120,9 +120,9 @@ Xft.rgba              : rgb
 ! ---------------------------------------------------------------------------
 ! Font settings
 ! ---------------------------------------------------------------------------
-URxvt*boldFont        : xft:DejaVu Sans Mono:size=7:style=Bold
-URxvt*italicFont      : xft:DejaVu Sans Mono:size=7:style=Italic
-URxvt.font            : xft:DejaVu Sans Mono:size=7
+URxvt*boldFont        : xft:DejaVu Sans Mono:size=10:style=Bold
+URxvt*italicFont      : xft:DejaVu Sans Mono:size=10:style=Italic
+URxvt.font            : xft:DejaVu Sans Mono:size=10
 
 ! ---------------------------------------------------------------------------
 ! color0       (black)            = Black

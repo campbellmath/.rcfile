@@ -52,7 +52,7 @@ setenv EDITOR vim
 
 set prompt = "${magenta}%n${green}@${yellow}%m${white}[${red}%P${white}][${cyan}%h${white}][%~]${cyan}Orz \n${green}\%${end} "
 # set path = ($HOME/opt/bin /sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin /usr/X11R6/bin $path)
-set path = ($HOME/opt/bin $path)
+# set path = ($HOME/opt/bin $path)
 
 eval `dircolors -c ~/.dir_colors`
 
