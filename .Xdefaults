@@ -1,83 +1,28 @@
 ! ---------------------------------------------------------------------------
+! Xft.antialias         : true
+! Xft.dpi               : 96
+! Xft.hinting           : true
+! Xft.hintstyle         : hintslight
+! Xft.rgba              : rgb
+! ---------------------------------------------------------------------------
 ! XTerm resources
-! X resources used in FVWM-Crystal project (http://fvwm-crystal.berlios.de/)
-! Written by: Maciej Delmanowski <harnir@post.pl>
-! Put this file as ~/.Xdefaults in your home directory
 ! ---------------------------------------------------------------------------
-
-! ---------------------------------------------------------------------------
-! XTerm resources
-! ---------------------------------------------------------------------------
-
-! ---------------------------------------------------------------------------
-! Look similar to the Linux Console
-! ---------------------------------------------------------------------------
-XTerm*background  : black
-XTerm*foreground  : white
-XTerm*cursorColor : green
-XTerm*Title       : XTerm
-XTerm*scrollBar   : false
-XTerm*saveLines   : 65535
-
-! ---------------------------------------------------------------------------
-! Colors similar to those used in Linux Console (ttyX)
-! ---------------------------------------------------------------------------
-! XTerm*color0  : rgb:00/00/00
-! XTerm*color1  : rgb:cc/00/00
-! XTerm*color2  : rgb:00/cc/00
-! XTerm*color3  : rgb:cc/cc/00
-! XTerm*color4  : rgb:00/00/cc
-! XTerm*color5  : rgb:cc/00/cc
-! XTerm*color6  : rgb:00/cc/cc
-! XTerm*color7  : rgb:cc/cc/cc
-! XTerm*color8  : rgb:77/77/77
-! XTerm*color9  : rgb:ff/00/00
-! XTerm*color10 : rgb:00/ff/00
-! XTerm*color11 : rgb:ff/ff/00
-! XTerm*color12 : rgb:00/00/ff
-! XTerm*color13 : rgb:ff/00/ff
-! XTerm*color14 : rgb:00/ff/ff
-! XTerm*color15 : rgb:ff/ff/ff
-
-! ---------------------------------------------------------------------------
-! Colors Tango
-! ---------------------------------------------------------------------------
-XTerm*color0  : #000000
-XTerm*color1  : #CC0000
-XTerm*color2  : #4E9A06
-XTerm*color3  : #C4A000
-XTerm*color4  : #3465A4
-XTerm*color5  : #75507B
-XTerm*color6  : #06989A
-XTerm*color7  : #D3D7CF
-XTerm*color8  : #555753
-XTerm*color9  : #EF2929
-XTerm*color10 : #8AE234
-XTerm*color11 : #FCE94F
-XTerm*color12 : #729FCF
-XTerm*color13 : #AD7FA8
-XTerm*color14 : #34E2E2
-XTerm*color15 : #EEEEEC
-
-! ---------------------------------------------------------------------------
-! Default XTerm colors
-! ---------------------------------------------------------------------------
-! XTerm*color0  : black
-! XTerm*color1  : red3
-! XTerm*color2  : green3
-! XTerm*color3  : brown
-! XTerm*color4  : blue3
-! XTerm*color5  : magenta3
-! XTerm*color6  : cyan3
-! XTerm*color7  : gray90
-! XTerm*color8  : gray30
-! XTerm*color9  : red
-! XTerm*color10 : green
-! XTerm*color11 : yellow
-! XTerm*color12 : blue
-! XTerm*color13 : magenta
-! XTerm*color14 : cyan
-! XTerm*color15 : white
+XTerm*faceName        : DejaVu Sans Mono
+XTerm*faceSize        : 10
+XTerm*VT100.geometry  : 80x24
+XTerm*geometry        : 80x24
+XTerm*loginShell      : no
+XTerm*charClass       : 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+XTerm*termName        : xterm-color
+XTerm*eightBitInput   : false
+XTerm*Title           : XTerm
+XTerm*rightScrollBar  : true
+XTerm*scrollBar       : false
+XTerm*ScrollKey       : true
+XTerm*saveLines       : 65535
+XTerm*cursorBlink     : true
+XTerm*borderWidth     : 0
+XTerm*dynamicColors   : true
 
 ! ---------------------------------------------------------------------------
 ! URxvt resources
@@ -85,45 +30,32 @@ XTerm*color15 : #EEEEEC
 !URxvt.shading:1
 URxvt*tint            : white
 URxvt*letterSpace     : 0
-URxvt.allow_bold      : true
-URxvt.background      : black
-URxvt.cursorColor     : green
-URxvt.cursorBlink     : true
-URxvt.cursorUnderline : false
-! URxvt.depth         : 32
-URxvt.fading          : 0
-URxvt.foreground      : white
-URxvt.geometry        : 80x24
-URxvt.internalBorder  : 3
-URxvt.lineSpace       : 0
-URxvt.loginShell      : no
-URxvt.matcher.button  : 1
-URxvt.pointerBlank    : true
-URxvt.saveLines       : 65535
-URxvt.scrollBar       : false
-URxvt.scrollStyle     : rxvt
-URxvt.termName        : rxvt
-URxvt.tintColor       : white
-URxvt.transparent     : false
-URxvt.urgentOnBell    : false
-URxvt.urlLauncher     : firefox
-URxvt.visualBell      : false
-URxvt.style           : Root
-URxvt.iconFile        : /usr/share/icons/X11.png
-! URxvt.inheritPixmap : true
-Xft.antialias         : true
-Xft.dpi               : 96
-Xft.hinting           : true
-Xft.hintstyle         : hintslight
-Xft.rgba              : rgb
-
-! ---------------------------------------------------------------------------
-! Font settings
-! ---------------------------------------------------------------------------
+URxvt*allow_bold      : true
+URxvt*cursorBlink     : true
+URxvt*cursorUnderline : false
+URxvt*depth           : 32
+URxvt*fading          : 0
+URxvt*geometry        : 80x24
+URxvt*internalBorder  : 3
+URxvt*lineSpace       : 0
+URxvt*loginShell      : no
+URxvt*matcher.button  : 1
+URxvt*pointerBlank    : true
+URxvt*saveLines       : 65535
+URxvt*scrollBar       : false
+URxvt*scrollStyle     : rxvt
+URxvt*termName        : rxvt
+URxvt*tintColor       : white
+URxvt*transparent     : false
+URxvt*urgentOnBell    : false
+URxvt*urlLauncher     : firefox
+URxvt*visualBell      : false
+URxvt*style           : Root
+! URxvt*iconFile        : /usr/share/icons/X11.png
+! URxvt*inheritPixmap   : true
 URxvt*boldFont        : xft:DejaVu Sans Mono:size=10:style=Bold
 URxvt*italicFont      : xft:DejaVu Sans Mono:size=10:style=Italic
-URxvt.font            : xft:DejaVu Sans Mono:size=10
-
+URxvt*font            : xft:DejaVu Sans Mono:size=10
 ! ---------------------------------------------------------------------------
 ! color0       (black)            = Black
 ! color1       (red)              = Red3
@@ -148,60 +80,109 @@ URxvt.font            : xft:DejaVu Sans Mono:size=10
 ! ---------------------------------------------------------------------------
 ! Colors Tango
 ! ---------------------------------------------------------------------------
-
-URxvt.color0  : #000000
-URxvt.color1  : #CC0000
-URxvt.color2  : #4E9A06
-URxvt.color3  : #C4A000
-URxvt.color4  : #3465A4
-URxvt.color5  : #75507B
-URxvt.color6  : #06989A
-URxvt.color7  : #D3D7CF
-URxvt.color8  : #555753
-URxvt.color9  : #EF2929
-URxvt.color10 : #8AE234
-URxvt.color11 : #FCE94F
-URxvt.color12 : #729FCF
-URxvt.color13 : #AD7FA8
-URxvt.color14 : #34E2E2
-URxvt.color15 : #EEEEEC
+#define _color0  #000000
+#define _color1  #CC0000
+#define _color2  #4E9A06
+#define _color3  #C4A000
+#define _color4  #3465A4
+#define _color5  #75507B
+#define _color6  #06989A
+#define _color7  #D3D7CF
+#define _color8  #555753
+#define _color9  #EF2929
+#define _color10 #8AE234
+#define _color11 #FCE94F
+#define _color12 #729FCF
+#define _color13 #AD7FA8
+#define _color14 #34E2E2
+#define _color15 #EEEEEC
 
 ! ---------------------------------------------------------------------------
 ! Colors similar to Linux console
 ! ---------------------------------------------------------------------------
-! URxvt.color0  : rgb:00/00/00
-! URxvt.color1  : rgb:cc/00/00
-! URxvt.color2  : rgb:00/cc/00
-! URxvt.color3  : rgb:cc/cc/00
-! URxvt.color4  : rgb:00/00/cc
-! URxvt.color5  : rgb:cc/00/cc
-! URxvt.color6  : rgb:00/cc/cc
-! URxvt.color7  : rgb:cc/cc/cc
-! URxvt.color8  : rgb:77/77/77
-! URxvt.color9  : rgb:ff/00/00
-! URxvt.color10 : rgb:00/ff/00
-! URxvt.color11 : rgb:ff/ff/00
-! URxvt.color12 : rgb:00/00/ff
-! URxvt.color13 : rgb:ff/00/ff
-! URxvt.color14 : rgb:00/ff/ff
-! URxvt.color15 : rgb:ff/ff/ff
+! #define _color0  #000000
+! #define _color1  #cc0000
+! #define _color2  #00cc00
+! #define _color3  #cccc00
+! #define _color4  #0000cc
+! #define _color5  #cc00cc
+! #define _color6  #00cccc
+! #define _color7  #cccccc
+! #define _color8  #777777
+! #define _color9  #ff0000
+! #define _color10 #00ff00
+! #define _color11 #ffff00
+! #define _color12 #0000ff
+! #define _color13 #ff00ff
+! #define _color14 #00ffff
+! #define _color15 #ffffff
 
 ! ---------------------------------------------------------------------------
 ! Default URxvt colors
 ! ---------------------------------------------------------------------------
-! URxvt.color0  : black
-! URxvt.color1  : red3
-! URxvt.color2  : green3
-! URxvt.color3  : brown
-! URxvt.color4  : blue3
-! URxvt.color5  : magenta3
-! URxvt.color6  : cyan3
-! URxvt.color7  : gray90
-! URxvt.color8  : gray30
-! URxvt.color9  : red
-! URxvt.color10 : green
-! URxvt.color11 : yellow
-! URxvt.color12 : blue
-! URxvt.color13 : magenta
-! URxvt.color14 : cyan
-! URxvt.color15 : white
+! #define _color0  black
+! #define _color1  red3
+! #define _color2  green3
+! #define _color3  brown
+! #define _color4  blue3
+! #define _color5  magenta3
+! #define _color6  cyan3
+! #define _color7  gray90
+! #define _color8  gray30
+! #define _color9  red
+! #define _color10 green
+! #define _color11 yellow
+! #define _color12 blue
+! #define _color13 magenta
+! #define _color14 cyan
+! #define _color15 white
+
+#define _foreground  white
+#define _background  black
+#define _cursorColor green
+
+XTerm*color0         : #000000
+XTerm*color1         : #CC0000
+XTerm*color2         : #4E9A06
+XTerm*color3         : #C4A000
+XTerm*color4         : #3465A4
+XTerm*color5         : #75507B
+XTerm*color6         : #06989A
+XTerm*color7         : #D3D7CF
+XTerm*color8         : #555753
+XTerm*color9         : #EF2929
+XTerm*color10        : #8AE234
+XTerm*color11        : #FCE94F
+XTerm*color12        : #729FCF
+XTerm*color13        : #AD7FA8
+XTerm*color14        : #34E2E2
+XTerm*color15        : #EEEEEC
+# XTerm*colorBD        : _colorBD
+# XTerm*colorIT        : _colorIT
+# XTerm*colorUL        : _colorUL
+XTerm*foreground     : white
+XTerm*background     : black
+XTerm*cursorColor    : green
+
+URxvt*color0         : #000000
+URxvt*color1         : #CC0000
+URxvt*color2         : #4E9A06
+URxvt*color3         : #C4A000
+URxvt*color4         : #3465A4
+URxvt*color5         : #75507B
+URxvt*color6         : #06989A
+URxvt*color7         : #D3D7CF
+URxvt*color8         : #555753
+URxvt*color9         : #EF2929
+URxvt*color10        : #8AE234
+URxvt*color11        : #FCE94F
+URxvt*color12        : #729FCF
+URxvt*color13        : #AD7FA8
+URxvt*color14        : #34E2E2
+URxvt*color15        : #EEEEEC
+# URxvt*colorBD        : _colorBD
+# URxvt*colorIT        : _colorIT
+# URxvt*colorUL        : _colorUL
+URxvt*foreground     : white
+URxvt*background     : black
+URxvt*cursorColor    : green
