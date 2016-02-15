@@ -38,6 +38,7 @@
 ;; set current buffer's tab char's display width to 4 spaces
 (setq tab-width 4)
 (setq c-basic-indent 4)
+(setq-default c-basic-offset 4)
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
