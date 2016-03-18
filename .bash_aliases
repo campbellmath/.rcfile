@@ -22,6 +22,7 @@ alias llah="ls -lah"
 alias less="less -r"
 alias grep="grep --color"
 alias tmux="tmux -2"
+alias tmux_reset="ps -C tmux -o pid= && killall -s SIGUSR1 tmux"
 alias matlabcli="matlab -nodesktop -nosplash -nojvm"
 alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git"
 alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose --exclude=.git"
@@ -31,6 +32,7 @@ alias vnc="vncserver -geometry 1366x768 -geometry 1024x640 -geometry 1600x1200 -
 alias sshGT="ssh 220.132.145.199 -p 22222 -X"
 alias dis="env | grep DISPLAY"
 function gi() { args=$@; curl -L -s https://www.gitignore.io/api/${args}; }
+function weather() { args=$@; curl -4 wttr.in/${args}; }
 
 OS=`uname -s`
 case $OS in
