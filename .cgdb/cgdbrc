@@ -1,4 +1,4 @@
-set arrowstyle=highlight
+set arrowstyle=long #  ‘long’, and ‘highlight’
 set autosourcereload
 set ignorecase
 set winminheight=2
@@ -6,9 +6,27 @@ set wrapscan
 set tabstop=4
 set winsplit=top_big
 set showtgdbcommands
-map <F2> :set<SPACE>winsplit=top_big<CR>
-map <F3> :set<SPACE>winsplit=bottom_big<CR>
-hi Statement cterm=bold ctermfg=6
-hi PreProc cterm=bold ctermfg=4
-hi IncSearch ctermfg=2
-hi LineHighlight cterm=bold ctermfg=3 ctermbg=4
+hi SelectedLineNr cterm=reverse ctermfg=Yellow ctermbg=Black
+map 1 :set<Space>winsplit=even<Cr>
+map 2 :set<Space>winsplit=top_big<Cr>
+map 3 :set<Space>winsplit=bottom_big<Cr>
+
+###############################################################################
+# COLOR NAME                          NR-16    NR-8    NR-8 bold attribute
+# Black                                  0       0            No
+# DarkBlue                               1       4            No
+# DarkGreen                              2       2            No
+# DarkCyan                               3       6            No
+# DarkRed                                4       1            No
+# DarkMagenta                            5       5            No
+# Brown, DarkYellow                      6       3            No
+# LightGray, LightGrey, Gray, Grey       7       7            No
+# DarkGray, DarkGrey                     8       0           Yes
+# Blue, LightBlue                        9       4           Yes
+# Green, LightGreen                     10       2           Yes
+# Cyan, LightCyan                       11       6           Yes
+# Red, LightRed                         12       1           Yes
+# Magenta, LightMagenta                 13       5           Yes
+# Yellow, LightYellow                   14       3           Yes
+# White                                 15       7           Yes
+###############################################################################

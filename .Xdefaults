@@ -49,7 +49,7 @@ URxvt*tintColor       : white
 URxvt*transparent     : false
 URxvt*urgentOnBell    : false
 URxvt*urlLauncher     : firefox
-URxvt*visualBell      : false
+URxvt*visualBell      : true
 URxvt*style           : Root
 ! URxvt*iconFile        : /usr/share/icons/X11.png
 ! URxvt*inheritPixmap   : true
