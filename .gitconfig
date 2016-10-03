@@ -1,6 +1,8 @@
 [user]
 	name = Wen-Chi Guo
 	email = campbellmath@gmail.com
+[push]
+    default = matching
 [alias]
     ll   = log --pretty=oneline --abbrev-commit
     lg   = log --pretty=oneline --abbrev-commit --graph --decorate --date=relative
@@ -29,6 +31,8 @@
 	trustExitCode = false
 [diff]
 	tool = vimdiff
+[difftool]
+    prompt = false
 [gui]
     encoding = utf-8
 [i18n]
