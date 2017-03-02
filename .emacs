@@ -38,6 +38,11 @@
 (xterm-mouse-mode t)
 (defun track-mouse (e))
 
+(global-set-key (kbd "C-x k") 'windmove-up)
+(global-set-key (kbd "C-x j") 'windmove-down)
+(global-set-key (kbd "C-x h") 'windmove-left)
+(global-set-key (kbd "C-x l") 'windmove-right)
+
 ;; Install using the latest version of Emacs and its builtin package system.
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -46,5 +51,5 @@
 ;; M-x el-get-install RET evil RET
 ;; M-x el-get-install RET ag  RET
 
-(require 'evil)
-(evil-mode 1)
+;; (require 'evil)
+;; (evil-mode 1)
