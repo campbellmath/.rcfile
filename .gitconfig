@@ -6,9 +6,10 @@
 [alias]
     ll   = log --pretty=oneline --abbrev-commit
     lg   = log --pretty=oneline --abbrev-commit --graph --decorate --date=relative
-    lgt  = log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-    lgtt = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-    la   = log --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold cyan)%an%Creset %C(blue)<%ce>%Creset' --abbrev-commit --all
+    lgt  = log --graph --pretty=format:'%C(red)%h%C(reset) %s %C(green)(%cr)%C(reset)' --abbrev-commit --date=relative
+    lgtt = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr)%C(reset)' --abbrev-commit --date=relative
+    la   = log --graph --pretty=format:'%C(red)%h%C(reset) -%C(bold yellow)%d%C(reset) %s %C(green)(%cr) %C(bold cyan)%an%C(reset) %C(blue)<%ce>%C(reset)' --abbrev-commit --all
+    la2  = log --graph --abbrev-commit --decorate --format=format:'%C(red)%H%C(reset) -%C(bold yellow)%d%C(reset)%n''%C(white)Author  :%C(reset) %C(bold cyan)%an%C(reset) %C(blue)<%ce>%C(reset)%n''%C(white)Date    :%C(reset) %C(yellow)%aD%C(reset) %C(green)(%ar)%C(reset)%n''Subject : %C(white)%s%C(reset)%n' --all
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 [color]
 	diff = auto
