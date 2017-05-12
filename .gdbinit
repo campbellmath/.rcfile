@@ -19,6 +19,7 @@ set print address on
 set print array-indexes on
 set print pretty on
 set print object on
+set print symbol-filename on
 set print static-members on
 set print vtbl on
 set print demangle on

@@ -11,8 +11,8 @@
     make-backup-files nil)
 
 (scroll-bar-mode -1)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
+;; (menu-bar-mode -1)
+;; (tool-bar-mode -1)
 (global-linum-mode 1)
 (line-number-mode 1)
 (column-number-mode 1)
