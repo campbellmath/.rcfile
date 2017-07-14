@@ -66,4 +66,8 @@ set listjobs
 set noclobber
 set notify
 
+if ( -r ~/.rcfile/.git-completion.tcsh ) then
+    source ~/.rcfile/.git-completion.tcsh
+endif
+
 bindkey -v
