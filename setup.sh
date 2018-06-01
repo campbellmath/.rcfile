@@ -19,6 +19,7 @@ FILES="$FILES .tmux.conf"
 FILES="$FILES .urxvt"
 FILES="$FILES .Xdefaults"
 FILES="$FILES .Xresources"
+FILES="$FILES .vnc"
 
 cd $HOME
 

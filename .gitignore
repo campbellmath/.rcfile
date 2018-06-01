@@ -1,2 +1,5 @@
 .cgdb/readline_history.txt
 .git-completion.tcsh.bash
+.vnc/*.log
+.vnc/*.pid
+.vnc/passwd

@@ -27,9 +27,10 @@ alias matlabcli="matlab -nodesktop -nosplash -nojvm"
 alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git"
 alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose --exclude=.git"
 alias cscope_c="find ./ -name \"*.c\" -or -name \"*.h\" -or -name \"*.cpp\" -or -name \"*.S\" | cscope -Rbqk"
-alias Win7="VBoxHeadless -s win7 -v off &"
-alias vnc="vncserver -depth 24 -geometry 1366x768" # -geometry 800x600 -geometry 1280x1024 -geometry 1920x1080 -geometry 1920x1200"
-# ssh -L 5901:localhost:5901 ip_address
+alias Win7="VBoxHeadless -s win7 -v off &" # MAC Address 080027A676E2
+alias Win10="VBoxHeadless -s win10 -v off &" # MAC Address 080027A676E2
+alias CentOS7="VBoxHeadless -s centos7 -v off &"
+alias vnc="vncserver -depth 24 -geometry 1908x1040" #-geometry 1908x1040 -geometry 1908x928 -geometry 1366x768 -geometry 1366x720 -geometry 800x600 -geometry 1280x1024 -geometry 1600x900 -geometry 1600x900 -geometry 1920x1080 -geometry 1920x1200"
 alias dis="env | grep DISPLAY"
 function gi() { args=$@; curl -L -s https://www.gitignore.io/api/${args}; }
 function weather() { args=$@; curl -4 wttr.in/${args}; }
