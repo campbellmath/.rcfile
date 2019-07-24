@@ -182,3 +182,4 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 ###############################################################################
 # export LIBGL_ALWAYS_INDIRECT=1
+xrdb -merge $HOME/.Xresources
