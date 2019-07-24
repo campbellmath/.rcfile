@@ -2,3 +2,8 @@
 cscope.*
 *.o
 *.so
+*.class
+*.png
+*.pdf
+*.gif
+*.tgz
