@@ -4,11 +4,23 @@ set ignorecase
 set winminheight=2
 set wrapscan
 set tabstop=4
-set winsplit=top_big
 set showtgdbcommands
-hi SelectedLineNr cterm=reverse ctermfg=Yellow ctermbg=Black
-map 1 :set<Space>winsplit=even<Cr>
-map 2 :set<Space>winsplit=top_big<Cr>
+
+###############################################################################
+# When enabled, if there is a previous search pattern, highlight all its
+# matches. The default is disabled.
+###############################################################################
+set hlsearch
+
+###############################################################################
+# Set the split point between source and GDB window. This is especially useful
+# as an init setting in your cgdbrc file. See Configuring CGDB. The possible
+# values for style are ‘src_full’, ‘src_big’, ‘even’, ‘gdb_big’, and ‘gdb_full’
+###############################################################################
+# Set the split point between source and GDB window. This is especially useful
+set winsplit=top_big
+map 1 :set<Space>winsplit=top_big<Cr>
+map 2 :set<Space>winsplit=even<Cr>
 map 3 :set<Space>winsplit=bottom_big<Cr>
 
 ###############################################################################
@@ -30,3 +42,4 @@ map 3 :set<Space>winsplit=bottom_big<Cr>
 # Yellow, LightYellow                   14       3           Yes
 # White                                 15       7           Yes
 ###############################################################################
+hi SelectedLineNr cterm=reverse ctermfg=Yellow ctermbg=Black

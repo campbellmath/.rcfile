@@ -722,9 +722,12 @@ end
 set print address on
 set print array-indexes on
 set print pretty on
+# When displaying a pointer to an object, identify the actual (derived) type of
+# the object rather than the declared type, using the virtual function table.
 set print object on
 set print symbol-filename on
 set print static-members on
+# Pretty print C++ virtual function tables. The default is off.
 set print vtbl on
 set print demangle on
 set demangle-style gnu-v3
