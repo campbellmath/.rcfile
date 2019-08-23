@@ -61,11 +61,11 @@ editor_cmd = terminal .. " -e " .. editor
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+modkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    -- awful.layout.suit.floating,
+    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -357,8 +357,8 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    -- awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
-    --           {description = "toggle floating", group = "client"}),
+    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
+              {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
               {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
@@ -477,35 +477,35 @@ awful.rules.rules = {
     },
 
     -- Floating clients.
-    -- { rule_any = {
-    --     instance = {
-    --       "DTA",  -- Firefox addon DownThemAll.
-    --       "copyq",  -- Includes session name in class.
-    --       "pinentry",
-    --     },
-    --     class = {
-    --       "Arandr",
-    --       "Blueman-manager",
-    --       "Gpick",
-    --       "Kruler",
-    --       "MessageWin",  -- kalarm.
-    --       "Sxiv",
-    --       "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-    --       "Wpa_gui",
-    --       "veromix",
-    --       "xtightvncviewer"},
-    --
-    --     -- Note that the name property shown in xprop might be set slightly after creation of the client
-    --     -- and the name shown there might not match defined rules here.
-    --     name = {
-    --       "Event Tester",  -- xev.
-    --     },
-    --     role = {
-    --       "AlarmWindow",  -- Thunderbird's calendar.
-    --       "ConfigManager",  -- Thunderbird's about:config.
-    --       "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
-    --     }
-    --   }, properties = { floating = true }},
+    { rule_any = {
+        instance = {
+          "DTA",  -- Firefox addon DownThemAll.
+          "copyq",  -- Includes session name in class.
+          "pinentry",
+        },
+        class = {
+          "Arandr",
+          "Blueman-manager",
+          "Gpick",
+          "Kruler",
+          "MessageWin",  -- kalarm.
+          "Sxiv",
+          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+          "Wpa_gui",
+          "veromix",
+          "xtightvncviewer"},
+
+        -- Note that the name property shown in xprop might be set slightly after creation of the client
+        -- and the name shown there might not match defined rules here.
+        name = {
+          "Event Tester",  -- xev.
+        },
+        role = {
+          "AlarmWindow",  -- Thunderbird's calendar.
+          "ConfigManager",  -- Thunderbird's about:config.
+          "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
+        }
+      }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
@@ -547,30 +547,30 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    -- awful.titlebar(c) : setup {
-    --     { -- Left
-    --         awful.titlebar.widget.iconwidget(c),
-    --         buttons = buttons,
-    --         layout  = wibox.layout.fixed.horizontal
-    --     },
-    --     { -- Middle
-    --         { -- Title
-    --             align  = "center",
-    --             widget = awful.titlebar.widget.titlewidget(c)
-    --         },
-    --         buttons = buttons,
-    --         layout  = wibox.layout.flex.horizontal
-    --     },
-    --     { -- Right
-    --         -- awful.titlebar.widget.floatingbutton (c),
-    --         -- awful.titlebar.widget.maximizedbutton(c),
-    --         -- awful.titlebar.widget.stickybutton   (c),
-    --         -- awful.titlebar.widget.ontopbutton    (c),
-    --         awful.titlebar.widget.closebutton    (c),
-    --         layout = wibox.layout.fixed.horizontal()
-    --     },
-    --     layout = wibox.layout.align.horizontal
-    -- }
+    awful.titlebar(c) : setup {
+        { -- Left
+            awful.titlebar.widget.iconwidget(c),
+            buttons = buttons,
+            layout  = wibox.layout.fixed.horizontal
+        },
+        { -- Middle
+            { -- Title
+                align  = "center",
+                widget = awful.titlebar.widget.titlewidget(c)
+            },
+            buttons = buttons,
+            layout  = wibox.layout.flex.horizontal
+        },
+        { -- Right
+            awful.titlebar.widget.floatingbutton (c),
+            awful.titlebar.widget.maximizedbutton(c),
+            -- awful.titlebar.widget.stickybutton   (c),
+            -- awful.titlebar.widget.ontopbutton    (c),
+            awful.titlebar.widget.closebutton    (c),
+            layout = wibox.layout.fixed.horizontal()
+        },
+        layout = wibox.layout.align.horizontal
+    }
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
