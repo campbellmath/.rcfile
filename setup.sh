@@ -32,6 +32,9 @@ case $OS in
         rm -vfr $HOME/.config/htop > /dev/null
         mkdir -p $HOME/.config/htop > /dev/null
         ln -s $HOME/.rcfile/.htoprc $HOME/.config/htop/htoprc
+
+        rm -vfr $HOME/.config/awesome> /dev/null
+        ln -s $HOME/.rcfile/.config/awesome $HOME/.config/awesome
         ;;
     "Darwin")
         rm -vfr .htoprc > /dev/null

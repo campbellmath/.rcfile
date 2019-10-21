@@ -1,18 +1,18 @@
 ###############################################################################
-# for rxvt resize font
+## for rxvt resize font
 ###############################################################################
 URxvt.keysym.C-plus:font-size:increase
 URxvt.keysym.C-minus:font-size:decrease
 URxvt.keysym.C-equal:font-size:reset
 URxvt.keysym.C-slash:font-size:show
 ###############################################################################
-# set input method
+## set input method
 ###############################################################################
 URxvt.inputMethod:scim
 URxvt.preeditType:OffTheSpot
 URxvt.imlocale:en_US.UTF-8
 ###############################################################################
-# Copy-Paste
+## Copy-Paste
 ###############################################################################
 URxvt.clipboard.autocopy: true
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
@@ -20,7 +20,7 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.iso14755:false
 URxvt.iso14755_52:false
 ###############################################################################
-# set clickable URLs
+## set clickable URLs
 ###############################################################################
 URxvt.perl-ext: default,matcher
 URxvt.urlLauncher: /usr/bin/google-chrome
