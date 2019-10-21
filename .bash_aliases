@@ -1,3 +1,4 @@
+alias countryroads='cd ~'
 alias ls='ls -F --color=auto'
 alias dir='dir --color=auto'
 alias dirdiff='diff --brief -r'

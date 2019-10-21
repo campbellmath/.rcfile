@@ -1,4 +1,5 @@
 .cgdb/readline_history.txt
+.cgdb/logs
 .git-completion.tcsh.bash
 .vnc/*.log
 .vnc/*.pid
