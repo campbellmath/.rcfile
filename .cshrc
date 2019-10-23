@@ -51,6 +51,11 @@ setenv LESS_TERMCAP_ue `bash -c 'echo -en "\033[0m"'`
 setenv LESS_TERMCAP_us `bash -c 'echo -en "\033[01;32m"'`
 setenv EDITOR vim
 
+set fzf_preview_window_opt='--bind up:preview-up,down:preview-down --reverse --preview-window down:80%:wrap '
+set fzf_color_schemes_nord='--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C --color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B'
+set fzf_color_schemes_molokai='--color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81 --color info:144,prompt:161,spinner:135,pointer:135,marker:118'
+setenv FZF_DEFAULT_OPTS " $fzf_preview_window_opt $fzf_color_schemes_molokai "
+
 set prompt = "${magenta}%n${green}@${yellow}%m${white}[${red}%P${white}][${cyan}%h${white}][%~]${cyan}Orz \n${green}\%${end} "
 # set path = ($HOME/opt/bin /sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin /usr/X11R6/bin $path)
 # set path = ($HOME/opt/bin $path)
