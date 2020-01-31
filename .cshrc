@@ -23,6 +23,8 @@ alias ctags_cpp "ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git
 alias cscope_c 'find ./ -name "*.c" -or -name "*.h" -or -name "*.cpp" -or -name "*.S"  -or -name "*.s"| cscope -Rbqk'
 alias delete_broken_symlinks 'find . -xtype l -delete'
 alias countryroads 'cd ~'
+alias fcd 'set _dir_=`find * -type d | fzf`;cd $_dir_; echo cd $_dir_'
+alias fpreview "fzf --preview 'bat --color always {}'"
 
 set       black="%{\033[1;30m%}"
 set         red="%{\033[1;31m%}"
