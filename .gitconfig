@@ -26,6 +26,7 @@
 	smptserverport = 587
 [core]
 	editor = vim
+	trustctime = false
 [merge]
 	tool = vimdiff
 [mergetool]
