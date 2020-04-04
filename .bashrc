@@ -87,9 +87,6 @@ case $OS in
         LC_COLLATE=C
         export LC_TIME=C
         export LANG LC_CTYPE LC_COLLATE
-        if [ "$HOSTNAME" = hilbert ]; then
-            linux_logo
-        fi
     ;;
     "Darwin")
         export PATH="$HOME/opt/bin:/usr/local/opt/coreutils/libexec/gnubin:$PATH"
