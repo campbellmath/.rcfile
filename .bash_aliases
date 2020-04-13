@@ -29,7 +29,7 @@ alias ctags_cpp="ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git
 alias ctags_java="ctags --recurse --langmap=Java:.java --languages=Java --verbose --exclude=.git"
 alias cscope_c="find ./ -name \"*.c\" -or -name \"*.h\" -or -name \"*.cpp\" -or -name \"*.S\" | cscope -Rbqk"
 alias VBoxFreeBSD="VBoxHeadless -s freebsd -v off &" # MAC Address ????????????
-alias VBoxWin10="VBoxHeadless -s euclid -v off &" # MAC Address 080027A676E2
+alias VBoxEuclid="VBoxHeadless -s euclid -v off &" # MAC Address 080027A676E2
 alias VBoxCentOS7="VBoxHeadless -s centos7 -v off &" # MAC Address ????????????
 alias vnc="vncserver -depth 24"
 alias vncnolocalhost="vncserver -depth 24 -localhost no"
