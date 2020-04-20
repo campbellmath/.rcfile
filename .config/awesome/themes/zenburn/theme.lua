@@ -12,29 +12,29 @@ local theme = {}
 -- }}}
 
 -- {{{ Styles
-theme.font      = "sans 10"
+theme.font      = "DejaVo Sans 9"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
 theme.fg_focus   = "#F0DFAF"
 theme.fg_urgent  = "#CC9393"
-theme.bg_normal  = "#3F3F3F"
-theme.bg_focus   = "#1E2320"
-theme.bg_urgent  = "#3F3F3F"
+theme.bg_normal  = "#1A1A1A"
+theme.bg_focus   = "#313131"
+theme.bg_urgent  = "#1A1A1A"
 theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(2)
-theme.border_normal = "#004400"
-theme.border_focus  = "#00cc00"
+theme.border_width  = dpi(1)
+theme.border_normal = "#3F3F3F"
+theme.border_focus  = "#00ee00"
 theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#3F3F3F"
-theme.titlebar_bg_normal = "#3F3F3F"
+theme.titlebar_bg_focus  = theme.bg_focus
+theme.titlebar_bg_normal = theme.bg_normal
 -- }}}
 
 -- There are other variable sets

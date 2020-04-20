@@ -27,9 +27,9 @@ URxvt*visualBell      : true
 URxvt*style           : Root
 ! URxvt*iconFile        : /usr/share/icons/X11.png
 ! URxvt*inheritPixmap   : true
-URxvt*boldFont        : xft:DejaVu Sans Mono:size=10:style=Bold
-URxvt*italicFont      : xft:DejaVu Sans Mono:size=10:style=Italic
-URxvt*font            : xft:DejaVu Sans Mono:size=10
+URxvt*boldFont        : xft:DejaVu Sans Mono:size=9:style=Bold,   xft:Unifont:size:9:style=Bold
+URxvt*italicFont      : xft:DejaVu Sans Mono:size=9:style=Italic, xft:Unifont:size:9:style=Italic
+URxvt*font            : xft:DejaVu Sans Mono:size=9,              xft:Unifont:size:9
 ! ---------------------------------------------------------------------------
 
 ! ---------------------------------------------------------------------------
