@@ -726,11 +726,12 @@ set print pretty on
 # the object rather than the declared type, using the virtual function table.
 set print object on
 set print symbol-filename on
-set print static-members on
+set print static-members off
 # Pretty print C++ virtual function tables. The default is off.
-set print vtbl on
+set print vtbl off
 set print demangle on
 set demangle-style gnu-v3
 set print sevenbit-strings off
 set history save on
 # set directories $path_to_src_dir
+# source ~/.gdbinit.py
