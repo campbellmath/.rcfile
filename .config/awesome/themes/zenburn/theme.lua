@@ -12,7 +12,7 @@ local theme = {}
 -- }}}
 
 -- {{{ Styles
-theme.font      = "DejaVo Sans 9"
+theme.font      = "DejaVo Sans 8"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -26,8 +26,8 @@ theme.bg_systray = theme.bg_normal
 
 -- {{{ Borders
 theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
-theme.border_normal = "#3F3F3F"
+theme.border_width  = dpi(2)
+theme.border_normal = "#6F6F6F"
 theme.border_focus  = "#00ee00"
 theme.border_marked = "#CC9393"
 -- }}}
@@ -67,8 +67,8 @@ theme.mouse_finder_color = "#CC9393"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_height = dpi(15)
-theme.menu_width  = dpi(100)
+theme.menu_height = dpi(17)
+theme.menu_width  = dpi(150)
 -- }}}
 
 -- {{{ Icons
