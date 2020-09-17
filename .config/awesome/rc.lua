@@ -69,20 +69,20 @@ modkey = "Mod1"
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
-    -- awful.layout.suit.tile.left,
+    awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
-    -- awful.layout.suit.tile.top,
-    -- awful.layout.suit.fair,
-    -- awful.layout.suit.fair.horizontal,
-    -- awful.layout.suit.spiral,
-    -- awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.tile.top,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
     -- awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
-    -- awful.layout.suit.magnifier,
-    -- awful.layout.suit.corner.nw,
-    -- awful.layout.suit.corner.ne,
-    -- awful.layout.suit.corner.sw,
-    -- awful.layout.suit.corner.se,
+    awful.layout.suit.magnifier,
+    awful.layout.suit.corner.nw,
+    awful.layout.suit.corner.ne,
+    awful.layout.suit.corner.sw,
+    awful.layout.suit.corner.se,
 }
 -- }}}
 
@@ -170,15 +170,17 @@ local tasklist_buttons = gears.table.join(
                                           end))
 
 local function set_wallpaper(s)
+    -- solid color
+    os.execute("xsetroot -solid '#111111'");
     -- Wallpaper
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        -- If wallpaper is a function, call it with the screen
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
+    -- if beautiful.wallpaper then
+    --     local wallpaper = beautiful.wallpaper
+    --     -- If wallpaper is a function, call it with the screen
+    --     if type(wallpaper) == "function" then
+    --         wallpaper = wallpaper(s)
+    --     end
+    --     gears.wallpaper.maximized(wallpaper, s, true)
+    -- end
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
@@ -359,7 +361,7 @@ clientkeys = gears.table.join(
     awful.key({ modkey,           }, "F4",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "f",  awful.client.floating.toggle                     ,
-              {description = "toggle floating", group = "client"})
+              {description = "toggle floating", group = "client"}),
     -- awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
     --           {description = "move to master", group = "client"}),
     -- awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
@@ -373,12 +375,12 @@ clientkeys = gears.table.join(
     --         c.minimized = true
     --     end ,
     --     {description = "minimize", group = "client"}),
-    -- awful.key({ modkey,           }, "m",
-    --     function (c)
-    --         c.maximized = not c.maximized
-    --         c:raise()
-    --     end ,
-    --     {description = "(un)maximize", group = "client"}),
+    awful.key({ modkey,           }, "m",
+        function (c)
+            c.maximized = not c.maximized
+            c:raise()
+        end ,
+        {description = "(un)maximize", group = "client"})
     -- awful.key({ modkey, "Control" }, "m",
     --     function (c)
     --         c.maximized_vertical = not c.maximized_vertical
@@ -534,13 +536,33 @@ client.connect_signal("manage", function (c)
     end
 end)
 
+-- Double click titlebar
+function double_click_event_handler(double_click_event)
+    if double_click_timer then
+        double_click_timer:stop()
+        double_click_timer = nil
+        return true
+    end
+
+    double_click_timer = gears.timer.start_new(0.20, function()
+        double_click_timer = nil
+        return false
+    end)
+end
+
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
 client.connect_signal("request::titlebars", function(c)
     -- buttons for the titlebar
     local buttons = gears.table.join(
         awful.button({ }, 1, function()
             c:emit_signal("request::activate", "titlebar", {raise = true})
-            awful.mouse.client.move(c)
+            -- WILL EXECUTE THIS ON DOUBLE CLICK
+            if double_click_event_handler() then
+                c.maximized = not c.maximized
+                c:raise()
+            else
+                awful.mouse.client.move(c)
+            end
         end),
         awful.button({ }, 3, function()
             c:emit_signal("request::activate", "titlebar", {raise = true})

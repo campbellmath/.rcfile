@@ -6,8 +6,10 @@ unset DBUS_SESSION_BUS_ADDRESS
 ###############################################################################
 # enable scim for chewing in VNC
 ###############################################################################
-export XXMODIFIERS=@im=SCIM
+export XXMODIFIERS="@im=SCIM"
 export GTK_IM_MODULE="scim"
+export QT_IM_MODULE="scim"
+export XIMPROGRAM="scim -d"
 XIM="SCIM"
 XIM_PROGRAM=scim
 XIM_ARGS="-d"
