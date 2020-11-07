@@ -73,6 +73,19 @@ case "$TERM" in
 esac
 
 ###############################################################################
+# enable color support of ls and also add handy aliases
+###############################################################################
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
+fi
+###############################################################################
 # set env in different OS
 OS=`uname -s`
 HOSTNAME=`uname -n`
@@ -130,11 +143,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-###############################################################################
-# enable color support of ls and also add handy aliases
-###############################################################################
-test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
-###############################################################################
 ###############################################################################
 # for colorful termial
 # 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
