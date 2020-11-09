@@ -21,6 +21,8 @@ FILES="$FILES .Xdefaults"
 FILES="$FILES .Xresources"
 FILES="$FILES .minttyrc"
 FILES="$FILES .vnc"
+FILES="$FILES .clang-format"
+FILES="$FILES .clang-tidy"
 
 cd $HOME
 
