@@ -68,22 +68,22 @@ modkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.floating,
+    -- awful.layout.suit.corner.ne,
+    -- awful.layout.suit.corner.nw,
+    -- awful.layout.suit.corner.se,
+    -- awful.layout.suit.corner.sw,
+    -- awful.layout.suit.fair,
+    -- awful.layout.suit.fair.horizontal,
+    -- awful.layout.suit.magnifier,
     -- awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
-    awful.layout.suit.corner.ne,
-    awful.layout.suit.corner.sw,
-    awful.layout.suit.corner.se,
+    -- awful.layout.suit.spiral,
+    -- awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.tile.bottom,
+    -- awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.top,
 }
 -- }}}
 
@@ -173,6 +173,8 @@ local tasklist_buttons = gears.table.join(
 local function set_wallpaper(s)
     -- solid color
     os.execute("xsetroot -solid '#111111'");
+    -- picture background
+    -- os.execute("feh --bg-scale /path/to/picture");
     -- Wallpaper
     -- if beautiful.wallpaper then
     --     local wallpaper = beautiful.wallpaper
@@ -327,7 +329,7 @@ clientkeys = gears.table.join(
         {description = "toggle fullscreen", group = "client"}),
     awful.key({ modkey,           }, "F4",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "f",  awful.client.floating.toggle                     ,
+    awful.key({ modkey,           }, "f",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     -- awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
     --           {description = "move to master", group = "client"}),

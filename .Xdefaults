@@ -1,7 +1,7 @@
 ! ---------------------------------------------------------------------------
 ! URxvt resources
 ! ---------------------------------------------------------------------------
-!URxvt.shading:1
+URxvt.shading:10
 URxvt*tint            : white
 URxvt*letterSpace     : -1
 URxvt*allow_bold      : true
@@ -21,7 +21,7 @@ URxvt*scrollBar       : false
 URxvt*scrollStyle     : rxvt
 URxvt*termName        : rxvt
 URxvt*tintColor       : white
-URxvt*transparent     : false
+URxvt*transparent     : true
 URxvt*urgentOnBell    : false
 URxvt*urlLauncher     : google-chrome
 URxvt*visualBell      : true
