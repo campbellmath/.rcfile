@@ -16,8 +16,9 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 shelltitle "---"
 
-caption always "%{.KW} %-w%{.mW}[%n] %t%{.KW}%+w %=%{R}Load%{W}: %{G}%l "
-hardstatus alwayslastline "%=%{P}%{KG}@%{Y}%H %{M}%D %{Y}%M %{C}%d%{W}/%{B}%m%{W}/%{R}%Y %{C}%4c:%s %1`"
+caption always "%{.KW} %-w%{.mW}[%n] %t%{.KW}%+w %=%{R}Load%{W}: %{G}%l %{P}@%{Y}%H %{C}%d%{W}/%{B}%m%{W}/%{R}%Y %{M}%D %{C}%4c:%s"
+# caption always "%{.KW} %-w%{.mW}[%n] %t%{.KW}%+w %=%{R}Load%{W}: %{G}%l "
+# hardstatus alwayslastline "%=%{P}%{KG}@%{Y}%H %{M}%D %{Y}%M %{C}%d%{W}/%{B}%m%{W}/%{R}%Y %{C}%4c:%s %1`"
 
 #bindkey "" prev
 #bindkey "" next
