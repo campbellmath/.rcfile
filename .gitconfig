@@ -26,6 +26,7 @@
 	trustExitCode = false
 [diff]
 	tool = vimdiff
+	colorMoved = zebra
 [difftool]
     prompt = false
 [gui]
@@ -35,3 +36,5 @@
     logoutputencoding = utf-8
 [pull]
 	rebase = true
+[fetch]
+	prune = true
