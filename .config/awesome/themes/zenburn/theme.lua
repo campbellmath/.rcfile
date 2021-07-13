@@ -12,7 +12,7 @@ local theme = {}
 -- }}}
 
 -- {{{ Styles
-theme.font      = "DejaVo Sans 8"
+theme.font      = "DejaVo Sans 12"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -25,16 +25,18 @@ theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
-theme.useless_gap   = dpi(4)
-theme.border_width  = dpi(2)
+theme.useless_gap   = dpi(1)
+theme.border_width  = dpi(3)
 theme.border_normal = "#6F6F6F"
-theme.border_focus  = "#00ee00"
+theme.border_focus  = "#00EE00"
 theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
 theme.titlebar_bg_focus  = theme.bg_focus
 theme.titlebar_bg_normal = theme.bg_normal
+theme.titlebar_close_button_normal = themes_path.."zenburn/titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = themes_path.."zenburn/titlebar/close_focus.png"
 -- }}}
 
 -- There are other variable sets
@@ -67,8 +69,8 @@ theme.mouse_finder_color = "#CC9393"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_height = dpi(17)
-theme.menu_width  = dpi(150)
+theme.menu_height = dpi(25)
+theme.menu_width  = dpi(200)
 -- }}}
 
 -- {{{ Icons
