@@ -38,6 +38,11 @@ case $OS in
 
         rm -vfr $HOME/.config/awesome> /dev/null
         ln -s $HOME/.rcfile/.config/awesome $HOME/.config/awesome
+        current_dir=`pwd`
+        cd $HOME/.rcfile/.config/awesome
+        git submodule init
+        git submodule update
+        cd $current_dir
         ;;
     "Darwin")
         rm -vfr .htoprc > /dev/null
