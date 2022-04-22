@@ -2,16 +2,25 @@ Checks: >
     -*,
     boost-*,
     bugprone-*,
+        -bugprone-narrowing-conversions,
+        -bugprone-easily-swappable-parameters,
     cert-*,
-    clang-analyzer-*
+        -cert-err60-cpp,
+    clang-analyzer-*,
     clang-diagnostic-*,
     cppcoreguidelines-*,
         -cppcoreguidelines-owning-memory,
         -cppcoreguidelines-avoid-magic-numbers,
+        -cppcoreguidelines-pro-type-vararg,
+        -cppcoreguidelines-narrowing-conversions,
+        -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
     fuchsia-*,
         -fuchsia-default-arguments-calls,
+        -fuchsia-overloaded-operator,
     google-*,
     hicpp-*,
+        -hicpp-vararg,
+        -hicpp-no-array-decay,
     misc-*,
     modernize-*,
         -modernize-use-trailing-return-type,
@@ -19,40 +28,25 @@ Checks: >
     performance-*,
     portability-*,
     readability-*,
+        -readability-magic-numbers,
         -readability-implicit-bool-conversion
 
-# CheckOptions:
-#   - key:   readability-identifier-naming.ClassCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.ClassMemberCase
-#     value: lower_case
-#   - key:   readability-identifier-naming.EnumCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.EnumConstantCase
-#     value: UPPER_CASE
-#   - key:   readability-identifier-naming.FunctionCase
-#     value: camelBack
-#   - key:   readability-identifier-naming.GlobalConstantCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.StaticConstantCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.StaticVariableCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.MacroDefinitionCase
-#     value: UPPER_CASE
-#   - key:   readability-identifier-naming.MemberCase
-#     value: lower_case
-#   - key:   readability-identifier-naming.NamespaceCase
-#     value: lower_case
-#   - key:   readability-identifier-naming.ParameterCase
-#     value: lower_case
-#   - key:   readability-identifier-naming.TypeAliasCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.TypedefCase
-#     value: CamelCase
-#   - key:   readability-identifier-naming.VariableCase
-#     value: lower_case
-#   - key:   readability-identifier-naming.IgnoreMainLikeFunctions
-#     value: 1
+Checks: '-*,readability-identifier-naming'
+CheckOptions:
+  - { key: readability-identifier-naming.ClassCase,               value: CamelCase  }
+  - { key: readability-identifier-naming.ClassMemberCase,         value: lower_case }
+  - { key: readability-identifier-naming.ConstexprVariableCase,   value: CamelCase  }
+  - { key: readability-identifier-naming.EnumCase,                value: CamelCase  }
+  - { key: readability-identifier-naming.EnumConstantCase,        value: CamelCase  }
+  - { key: readability-identifier-naming.FunctionCase,            value: camelBack  }
+  - { key: readability-identifier-naming.GlobalConstantCase,      value: UPPER_CASE }
+  - { key: readability-identifier-naming.IgnoreMainLikeFunctions, value: 1          }
+  - { key: readability-identifier-naming.MacroDefinitionCase,     value: UPPER_CASE }
+  - { key: readability-identifier-naming.MemberCase,              value: lower_case }
+  - { key: readability-identifier-naming.NamespaceCase,           value: CamelCase  }
+  - { key: readability-identifier-naming.ParameterCase,           value: lower_case }
+  - { key: readability-identifier-naming.PrivateMemberPrefix,     value: m_         }
+  - { key: readability-identifier-naming.StructCase,              value: CamelCase  }
+  - { key: readability-identifier-naming.VariableCase,            value: lower_case }
 WarningsAsErrors: false
 FormatStyle: google
