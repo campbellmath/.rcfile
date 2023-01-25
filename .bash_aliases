@@ -32,8 +32,10 @@ alias VBoxFreeBSD="VBoxHeadless -s freebsd -v off &" # MAC Address ????????????
 alias VBoxEuclid="VBoxHeadless -s euclid -v off &" # MAC Address 080027A676E2
 alias VBoxCentOS7="VBoxHeadless -s centos7 -v off &" # MAC Address ????????????
 alias vnc="vncserver -depth 24"
-alias vncnolocalhost="vncserver -depth 24 -localhost no"
+# alias vncnolocalhost="vncserver -depth 24 -localhost no"
+alias vncnolocalhost="vncserver -depth 24 -geometry 1360x768 -localhost no"
 alias dis="env | grep DISPLAY"
+source $HOME/.bash_aliases_wakeonlan
 function gi() { args=$@; curl -L -s https://www.gitignore.io/api/${args}; }
 function weather() { args=$@; curl -4 wttr.in/${args}; }
 
