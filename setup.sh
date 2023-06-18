@@ -36,13 +36,14 @@ case $OS in
         mkdir -p $HOME/.config/htop > /dev/null
         ln -s $HOME/.rcfile/.htoprc $HOME/.config/htop/htoprc
 
-        rm -vfr $HOME/.config/awesome> /dev/null
-        ln -s $HOME/.rcfile/.config/awesome $HOME/.config/awesome
-        current_dir=`pwd`
-        cd $HOME/.rcfile/.config/awesome
-        git submodule init
-        git submodule update
-        cd $current_dir
+        ln -s $HOME/.rcfile/.config/i3 $HOME/.config/i3
+        # rm -vfr $HOME/.config/awesome > /dev/null
+        # ln -s $HOME/.rcfile/.config/awesome $HOME/.config/awesome
+        # current_dir=`pwd`
+        # cd $HOME/.rcfile/.config/awesome
+        # git submodule init
+        # git submodule update
+        # cd $current_dir
         ;;
     "Darwin")
         rm -vfr .htoprc > /dev/null
