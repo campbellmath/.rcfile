@@ -23,6 +23,7 @@ FILES="$FILES .minttyrc"
 FILES="$FILES .vnc"
 FILES="$FILES .clang-format"
 FILES="$FILES .clang-tidy"
+FILES="$FILES .chrome-remote-desktop-session"
 
 cd $HOME
 

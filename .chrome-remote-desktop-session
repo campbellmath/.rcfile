@@ -1,2 +1,2 @@
 pulseaudio --start
-exec /etc/X11/Xsession 'awesome'
+exec /etc/X11/Xsession /usr/bin/i3

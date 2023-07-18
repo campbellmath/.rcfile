@@ -35,6 +35,9 @@ alias vnc="vncserver -depth 24"
 # alias vncnolocalhost="vncserver -depth 24 -localhost no"
 alias vncnolocalhost="vncserver -depth 24 -geometry 1360x768 -localhost no"
 alias dis="env | grep DISPLAY"
+# ref: https://cloud.google.com/architecture/chrome-desktop-remote-on-compute-engine
+alias chrome_rdp_start="/opt/google/chrome-remote-desktop/chrome-remote-desktop --start"
+alias chrome_rdp_stop="/opt/google/chrome-remote-desktop/chrome-remote-desktop --stop"
 source $HOME/.bash_aliases_wakeonlan
 function gi() { args=$@; curl -L -s https://www.gitignore.io/api/${args}; }
 function weather() { args=$@; curl -4 wttr.in/${args}; }

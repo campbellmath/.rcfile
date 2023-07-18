@@ -6,13 +6,13 @@ unset DBUS_SESSION_BUS_ADDRESS
 ###############################################################################
 # enable scim for chewing in VNC
 ###############################################################################
-# export XXMODIFIERS="@im=SCIM"
-# export GTK_IM_MODULE="scim"
-# export QT_IM_MODULE="scim"
-# export XIMPROGRAM="scim -d"
-# XIM="SCIM"
-# XIM_PROGRAM=scim
-# XIM_ARGS="-d"
+export XXMODIFIERS="@im=SCIM"
+export GTK_IM_MODULE="scim"
+export QT_IM_MODULE="scim"
+export XIMPROGRAM="scim -d"
+XIM="SCIM"
+XIM_PROGRAM=scim
+XIM_ARGS="-d"
 ###############################################################################
 
 # exec /etc/X11/xinit/xinitrc[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
