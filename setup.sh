@@ -24,6 +24,7 @@ FILES="$FILES .vnc"
 FILES="$FILES .clang-format"
 FILES="$FILES .clang-tidy"
 FILES="$FILES .chrome-remote-desktop-session"
+FILES="$FILES .i3status.conf"
 
 cd $HOME
 
